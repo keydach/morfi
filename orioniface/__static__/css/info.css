@@ -1,0 +1,19 @@
+body {
+  margin-top: 50px;
+}
+
+h3 {
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.infoblock {
+	margin-bottom: 20px;
+	padding: 10px 20px 0px 20px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+}
+
+.table-headers-centered th {
+	text-align: center;
+}
