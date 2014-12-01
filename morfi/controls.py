@@ -63,6 +63,14 @@ class GroupBox (Group):
         self.title = title
 
 
+class FileField (Field):
+
+    def __init__ (self, buttontext = u'Выберите файл', emptytext = '', **kwargs):
+        super (FileField, self).__init__ (**kwargs)
+        self.emptytext = emptytext
+        self.buttontext = buttontext
+
+
 #class CheckList (Titled):
 #
 #    def __init__ (self, name, title = '', default = [], items = ()):

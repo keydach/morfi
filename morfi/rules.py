@@ -10,6 +10,7 @@ email_pattern = ur'^[a-z0-9_.-]{1,40}@(([a-z0-9-]+\.)+([a-z]{2,})|[0-9]{1,3}\.[0
 phone_pattern = ur'^((\+\d{1,3})|8)[\s\-]*(\(\d{3}\)|\d{3})[\s\-]*(\d{3}[\s\-]*\d{2}[\s\-]*\d{2})|(\d{2}[\s\-]*\d{2}[\s\-]*\d{3})|(\d{2}[\s\-]*\d{3}[\s\-]*\d{2})$'
 numeric_pattern = ur'^(\-|\+)?\d+(\.\d+)?$'
 int_pattern = ur'^(\-|\+)?\d+$'
+bool_pattern = ur'^[0-1]$'
 
 
 def to (type_, value, default):
@@ -65,6 +66,8 @@ class Regexp (Rule):
             control.converters.append (lambda x: to (float, x, 0.0))
 
     def __call__ (self, control):
+        print unicode (control.value)
+        print self._regexp.search (unicode (control.value))
         return None if unicode (control.value) == '' or self._regexp.search (unicode (control.value)) else self.message
 
 
@@ -85,7 +88,7 @@ class _HasItem (Rule):
     Внутреннее правило для списков
     '''
     def __call__ (self, control):
-        return None if control.value in [item [0] for item in control.items] else self.message
+        return None if control.value in [str (item [0]) for item in control.items] else self.message
 
 
 class _Captcha (Rule):

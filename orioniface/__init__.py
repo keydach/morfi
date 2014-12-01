@@ -45,7 +45,7 @@ def get_applications (mode, basename):
         vhosts = conf.get ('vhosts', '.'.join ((__package__, basename))),
         config = config,
         routes = (
-            ('/', controllers.Example (), None),
+            ('/', controllers.SbrfImport (), None),
        )
     )
     return app
