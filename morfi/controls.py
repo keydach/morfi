@@ -17,6 +17,7 @@ class Form (Group):
         super (Form, self).load (self.loader)
 
     def submitted (self):
+        print 'submit'
         return self.loader (self.submitted_field, None) == 'submitted'
 
 
@@ -65,19 +66,7 @@ class GroupBox (Group):
 
 class FileField (Field):
 
-    def __init__ (self, buttontext = u'Выберите файл', emptytext = '', **kwargs):
+    def __init__ (self, name = 'txtfile', **kwargs):
         super (FileField, self).__init__ (**kwargs)
-        self.emptytext = emptytext
-        self.buttontext = buttontext
-
-
-#class CheckList (Titled):
-#
-#    def __init__ (self, name, title = '', default = [], items = ()):
-#        super (CheckList, self).__init__ (name, title, default)
-#        self.items = items
-#
-#    def _load_value (self):
-#        self.value = [item for item in self.listItems if item [0] in cherrypy.request.params]
-
+        self.name = name
 

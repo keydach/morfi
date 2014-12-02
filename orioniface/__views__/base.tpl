@@ -37,8 +37,8 @@
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="/static/bs/assets/jquery.js"></script>
-	<script src="/static/bs/js/bootstrap.min.js"></script>
+	<!--<script src="/static/bs/assets/jquery.js"></script>
+	<script src="/static/bs/js/bootstrap.min.js"></script> -->
 
 	{% block scripts %}{% endblock	%}
 </body>

@@ -11,8 +11,9 @@ class ImportFileForm (controls.Form):
 
     file = controls.FileField ()
 
-    def __init__ (self):
+    def __init__ (self, name = 'impform'):
         super (ImportFileForm, self).__init__ ('ImportFileForm', loaders.cherrypy_loader, u'Импорт')
+        self.name = name
         if self.submitted ():
             self.load ()
 
@@ -27,8 +28,8 @@ class Base (object):
 
 class SbrfImport (Base):
 
-    def import_payments (self):
-        pass
+    def import_payments (self, form):
+        print form.file.values
 
     @cherrypy.expose
     @cherrypy.tools.jinja (template = 'sbrfimport/form.tpl')
@@ -36,6 +37,6 @@ class SbrfImport (Base):
         form = ImportFileForm ()
         if not form.submitted () or not form.check ():
             return {'form': form}
-        self.import_payments ()
+        self.import_payments (form)
         return {'msg': u'Платежи успешно импортированны'}
 

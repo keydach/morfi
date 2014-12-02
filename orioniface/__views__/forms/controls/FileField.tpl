@@ -2,6 +2,7 @@
 <div class="form-group">
 	<input 
   		type="file"
+  		{% if ctrl.name %}name="{{ ctrl.name }}"{% endif %}
   	/>
 	{{ main.errors (ctrl) }}
 </div>
