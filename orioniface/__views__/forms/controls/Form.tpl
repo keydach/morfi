@@ -1,5 +1,5 @@
 {%- import '%s/%s' % (path, 'main.tpl') as main -%}
-<form name="{{ ctrl.name }}" method="post">
+<form name="{{ ctrl.name }}" enctype="multipart/form-data" method="post">
 	<input type="hidden" name="__submitted__" value="submitted" />
 	{{ main.children (ctrl, path) }}
 	<table class="form-submit">

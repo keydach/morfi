@@ -9,10 +9,10 @@
 	
 	<title>{% block title %}Это ТАЙТЛ по дефолту{% endblock %}</title>
 	
-	<link href="/static/font/roboto.css" rel="stylesheet">
+	<!-- <link href="/static/font/roboto.css" rel="stylesheet"> -->
 	
 	<!-- Bootstrap core CSS -->
-	<link href="/static/bs/css/bootstrap.css" rel="stylesheet">
+	<!-- <link href="/static/bs/css/bootstrap.css" rel="stylesheet"> -->
 	
 	<!-- Custom styles for this template -->
 	{% block head %}

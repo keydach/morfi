@@ -1,9 +1,7 @@
 {% import 'forms/main.tpl' as forms %}
-
-{% extends 'base.tpl' %}
-
-{% block content %}
+{% if form %}
 	<div class="col-md-12" id="main-container">
-		{{ forms.build (form) if form else msg }}
+		{{ forms.build (form) }}
 	</div>
-{% endblock content %}
+{% endif %}
+{% if msg %}{{ msg }}{% endif %}
