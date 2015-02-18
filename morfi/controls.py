@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from morfi.base import Field, Group
+from morfi.base import Field, Group, BaseGrid
 import morfi.rules as mrules
 
 
