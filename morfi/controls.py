@@ -28,6 +28,10 @@ class Titled (Field):
         self.title = title
 
 
+class Grid (Field):
+    pass
+
+
 class StaticText (Titled):
     pass
 
@@ -47,6 +51,15 @@ class Edit (Titled):
 
 class CheckBox (Titled):
     pass
+
+
+class Select (Field):
+
+    def __init__ (self, name, title, data = {}, **kwargs):
+        super (Select, self).__init__ (**kwargs)
+        self.name = name
+        self.title = title
+        self.data = data
 
 
 class ComboBox (Titled):

@@ -80,3 +80,6 @@ class Group (Field):
         for field in self.fields ():
             res = field.check () and res
         return res
+
+class Grid (object):
+    pass
