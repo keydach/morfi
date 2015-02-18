@@ -81,5 +81,12 @@ class Group (Field):
             res = field.check () and res
         return res
 
-class Grid (object):
-    pass
+
+class BaseGrid (object):
+
+    def __init__ (self, header):
+        self.header = header
+        self.data = None
+
+    def set_line (self, line):
+        self.data.append (line)

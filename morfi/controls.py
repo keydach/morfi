@@ -28,10 +28,6 @@ class Titled (Field):
         self.title = title
 
 
-class Grid (Field):
-    pass
-
-
 class StaticText (Titled):
     pass
 
@@ -82,4 +78,10 @@ class FileField (Field):
     def __init__ (self, name = 'txtfile', **kwargs):
         super (FileField, self).__init__ (**kwargs)
         self.name = name
+
+
+class Grid (BaseGrid):
+
+    def __init__ (self, header, **kwargs):
+        super (Grid, self).__init__ (header, **kwargs)
 
