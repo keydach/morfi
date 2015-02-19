@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
 class BaseField (object):
-    pass
+
+    def __init__ (self):
+        self.html_options = {}
 
 
 class Meta (type):
@@ -82,7 +84,7 @@ class Group (Field):
         return res
 
 
-class BaseGrid (object):
+class BaseGrid (BaseField):
 
     def __init__ (self, header = []):
         self.header = header

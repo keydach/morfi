@@ -84,4 +84,6 @@ class Grid (BaseGrid):
 
     def __init__ (self, header, **kwargs):
         super (Grid, self).__init__ (header, **kwargs)
+        self.class_name = None
+
 
