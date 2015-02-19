@@ -84,9 +84,9 @@ class Group (Field):
 
 class BaseGrid (object):
 
-    def __init__ (self, header):
+    def __init__ (self, header = []):
         self.header = header
-        self.data = None
+        self.data = []
 
     def set_line (self, line):
         self.data.append (line)
