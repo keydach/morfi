@@ -5,7 +5,7 @@ __pycache__/
 # Mr Developer
 .mr.developer.cfg
 .project
-.pydevproject
+#.pydevproject
 /.settings
 
 # C extensions
