@@ -17,7 +17,6 @@ class Form (Group):
         super (Form, self).load (self.loader)
 
     def submitted (self):
-        print 'submit'
         return self.loader (self.submitted_field, None) == 'submitted'
 
 
@@ -51,11 +50,12 @@ class CheckBox (Titled):
 
 class Select (Field):
 
-    def __init__ (self, name, title, data = {}, **kwargs):
+    def __init__ (self, name, title, data = {}, default = False, **kwargs):
         super (Select, self).__init__ (**kwargs)
         self.name = name
         self.title = title
         self.data = data
+        self.default = default
 
 
 class ComboBox (Titled):
